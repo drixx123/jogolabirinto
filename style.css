@@ -1,65 +1,96 @@
 body {
-    background-color: #f0f0f0;
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #f4f4f4;
+}
+
+.game-container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     color: #333;
 }
 
-p {
-    color: #666;
+.game-area {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-#game-container {
-    border: 2px solid #333;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#maze {
+.grid-container {
     display: grid;
-    border-collapse: collapse;
-}
-
-.wall {
-    background-color: #333;
-}
-
-.path {
-    background-color: #fff;
-}
-
-.player {
-    background-color: #007bff;
-    position: relative;
-}
-
-.finish {
-    background-color: #28a745;
-    position: relative;
-}
-
-#message {
-    margin-top: 20px;
-    padding: 10px;
+    border: 2px solid #ccc;
+    padding: 5px;
     border-radius: 5px;
+}
+
+.grid-cell {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
     font-weight: bold;
-    color: #fff;
-    text-align: center;
+    color: #333;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
 }
 
-#message.win {
-    background-color: #28a745;
+.grid-cell.selected {
+    background-color: #a0d8ff;
 }
 
-#message.hidden {
-    display: none;
+.grid-cell.found {
+    background-color: #8aff8a;
+    color: #006400;
+}
+
+.word-list-container {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: left;
+}
+
+.word-list-container h2 {
+    margin-top: 0;
+    color: #555;
+}
+
+#words {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#words li {
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: color 0.2s;
+}
+
+#words li.found {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.message-area {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
 }

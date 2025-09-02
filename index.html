@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo do Labirinto</title>
+    <title>Caça-Palavras</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <h1>Jogo do Labirinto</h1>
-    <p>Use as setas do teclado (↑ ↓ ← →) para se mover.</p>
-    
-    <div id="game-container">
-        <div id="maze"></div>
+    <div class="game-container">
+        <h1>Caça-Palavras</h1>
+        <div class="game-area">
+            <div id="word-search-grid" class="grid-container"></div>
+            <div id="word-list" class="word-list-container">
+                <h2>Palavras para encontrar</h2>
+                <ul id="words"></ul>
+            </div>
+        </div>
+        <div id="message-area" class="message-area"></div>
     </div>
-
-    <div id="message" class="hidden"></div>
-
     <script src="script.js"></script>
 </body>
 </html>
